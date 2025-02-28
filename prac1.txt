@@ -47,3 +47,9 @@ minikube start
 kubectl apply -f deployment.yaml
 kubectl get pods 
 kubectl logs copypaste 
+
+docker --version
+docker info 
+docker run -it ubuntu
+docker ps -a
+docker stop
