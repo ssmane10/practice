@@ -13,3 +13,37 @@ git checkout name
 git checkout master 
 git merge name 
 git branch -d name 
+
+
+FROM python:3.9-slim
+WORKDIR /app
+COPY  prac2.py .
+CMD [ "python","prac2.py" ]
+
+
+FROM php:8.2-cli
+COPY . /var/www/html
+WORKDIR /var/www/html
+CMD [ "php","prac3.php" ]
+EXPOSE 80
+
+FROM openjdk:latest
+WORKDIR /app
+COPY prac1.java .
+RUN javac prac1.java
+CMD [ "java","prac1" ]
+
+FROM node:18
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+EXPOSE 3000
+CMD ["node", "server.js"]
+
+docker build
+docker run 
+docker push ssmane10/egi
+minikube start
+kubectl apply -f deployment.yaml
+kubectl get pods 
+kubectl logs copypaste 
