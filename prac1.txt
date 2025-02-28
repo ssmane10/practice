@@ -1,1 +1,15 @@
-saumitra mane practice
+git init 
+git config --global user.name
+git config --global user.email
+git config --list
+git config add .
+git config add eg1.txt
+git commit -m  ""
+git status
+git remote add origin link
+git push -u origin master 
+git branch name 
+git checkout name 
+git checkout master 
+git merge name 
+git branch -d name 
